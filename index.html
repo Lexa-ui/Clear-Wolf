@@ -28,7 +28,8 @@
   "knowsAbout":["Szállodatakarítás","Étteremtakarítás","Konyhatakarítás","Elszívótisztítás","Gépi padlósúrolás","Ablaktisztítás","Szőnyegtisztítás","Kárpittisztítás","Irodatakarítás","Építkezés utáni takarítás","Garázstakarítás"]
 }
 </script>
-<link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="preload" href="cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -46,7 +47,7 @@
 :root{
   --navy:#1f2940; --navy-2:#253050; --navy-deep:#18203a;
   --gold:#c9a96a; --gold-light:#e6cc97; --gold-grad:linear-gradient(135deg,#f1dcae 0%,#d4b27a 45%,#b8914f 100%);
-  --cream:#f6f1e8;--gold-text:#a8833f; --cream-2:#ebe4d7; --ink:#2a2f3c; --muted:#6c6f78;
+  --cream:#f6f1e8;--gold-text:#8a6a2c; --cream-2:#ebe4d7; --ink:#2a2f3c; --muted:#6c6f78;
   --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -97,13 +98,14 @@ header .brand-text small{color:#d8d3c8}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;background:var(--cream);overflow:hidden;min-height:620px;display:flex;align-items:center}
-.hero-img{position:absolute;inset:0 0 0 40%;background:url(hero.jpg) 62% center/cover no-repeat}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f6f1e8 0%,#f6f1e8 40%,rgba(246,241,232,.9) 46%,rgba(246,241,232,.45) 54%,rgba(246,241,232,0) 64%);pointer-events:none}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% center}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(246,241,232,.84) 0%,rgba(246,241,232,.78) 34%,rgba(246,241,232,.6) 46%,rgba(246,241,232,.25) 58%,rgba(246,241,232,0) 70%);pointer-events:none}
+.hero h1,.hero .kicker,.hero p{text-shadow:0 0 18px rgba(246,241,232,.9),0 0 2px rgba(246,241,232,.6)}
 .hero-content{position:relative;z-index:2;max-width:600px;padding:90px 0}
 .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,5.4vw,76px);line-height:1.04;color:var(--navy);letter-spacing:-.005em}
 .hero h1 em{font-style:normal;display:block;color:#94722f}
 .hero .rule{width:96px;height:2px;background:var(--gold-grad);margin:30px 0 28px}
-.hero .kicker{display:block;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#94722f;margin-bottom:22px}
+.hero .kicker{display:block;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#76581d;margin-bottom:22px}
 .hero p{color:#353b48;font-size:19px;font-weight:400;line-height:1.6;max-width:470px}
 .btn{display:inline-flex;align-items:center;gap:14px;background:var(--gold-grad);color:var(--navy);font-weight:500;font-size:16px;border-radius:40px;padding:16px 32px;margin-top:38px;box-shadow:0 10px 30px rgba(201,169,106,.25);transition:transform .3s,box-shadow .3s}
 .btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(201,169,106,.38)}
@@ -160,18 +162,18 @@ header .brand-text small{color:#d8d3c8}
 
 /* ---------- WHY ---------- */
 .why{position:relative;background:var(--cream);border-top:1px solid #ece4d6;overflow:hidden;min-height:300px}
-.why-img{position:absolute;left:0;top:0;bottom:0;width:44%;background:url(cta.jpg) 0% 50%/cover no-repeat;clip-path:polygon(0 0,100% 0,72% 100%,0 100%)}
+.why-img{position:absolute;left:0;top:0;bottom:0;width:44%;background:url(cta.webp) 0% 50%/cover no-repeat;clip-path:polygon(0 0,100% 0,72% 100%,0 100%)}
 .why-line{position:absolute;left:0;top:0;bottom:0;width:44%;pointer-events:none}
 .why-line svg{width:100%;height:100%}
-.why-wolf{width:auto;position:absolute;right:3%;top:50%;transform:translateY(-50%);height:88%;opacity:.06;pointer-events:none}
+.why-wolf{width:auto;max-width:none;object-fit:contain;position:absolute;right:3%;top:50%;transform:translateY(-50%);height:88%;opacity:.06;pointer-events:none}
 .why-inner{position:relative;z-index:2;display:grid;grid-template-columns:44% 1fr auto;align-items:center;gap:40px;padding:62px 0}
 .why h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,3vw,40px);color:var(--navy);line-height:1.15;margin-bottom:22px}
 .why h2 span{color:var(--gold-text)}
 .why-lead{color:#3f4553;font-size:16.5px;line-height:1.65;max-width:520px;margin:-6px 0 18px}
-.why ul{list-style:none}
-.why li{display:flex;align-items:center;gap:18px;color:#3f4553;font-size:18px;font-weight:300;padding:6px 0}
+.why ul{list-style:none;max-width:540px}
+.why li{display:flex;align-items:flex-start;gap:18px;color:#3f4553;font-size:18px;font-weight:300;padding:6px 0}
 .why li:nth-child(2){color:var(--gold-text)}
-.why li svg{width:20px;height:20px;flex:none;stroke:var(--gold-text);fill:none;stroke-width:2.2}
+.why li svg{width:20px;height:20px;flex:none;margin-top:5px;stroke:var(--gold-text);fill:none;stroke-width:2.2}
 .why .btn{margin-top:0;white-space:nowrap}
 .why-side{display:flex;flex-direction:column;align-items:center;gap:26px}
 .years{display:flex;align-items:center;gap:14px}
@@ -190,7 +192,17 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
 .foot-brand{display:flex;align-items:center;gap:26px;padding-left:44px;border-left:1px solid #e3d8c4}
 .foot-brand .lockup img{height:80px;filter:none}
 .foot-brand .lk-word{font-size:28px}
-.copy{position:relative;z-index:2;font-size:12px;color:var(--muted);padding:0 0 26px}
+.copy{position:relative;z-index:2;font-size:12.5px;color:var(--muted);padding:0 0 26px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px}
+.legal{display:flex;flex-wrap:wrap;gap:6px 24px}
+.legal a{color:var(--navy);border-bottom:1px solid transparent;transition:.25s}
+.legal a:hover{color:var(--gold-text);border-color:var(--gold)}
+/* ---------- SÜTI SÁV ---------- */
+.cookie{position:fixed;left:50%;bottom:20px;transform:translate(-50%,20px);width:min(760px,calc(100% - 28px));background:var(--navy);color:#ece8e0;border:1px solid rgba(201,169,106,.45);border-radius:10px;padding:18px 22px;display:flex;align-items:center;gap:20px;box-shadow:0 18px 50px rgba(15,20,35,.35);z-index:100;opacity:0;visibility:hidden;transition:.45s}
+.cookie.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.cookie p{font-size:14px;line-height:1.55;flex:1}
+.cookie a{color:var(--gold-light);text-decoration:underline;text-underline-offset:3px}
+.cookie button{flex:none;border:0;cursor:pointer;background:var(--gold-grad);color:var(--navy);font:500 14px var(--sans);border-radius:30px;padding:11px 26px}
+@media (max-width:560px){.cookie{flex-direction:column;align-items:stretch;text-align:left;padding:16px}.cookie p{font-size:13.5px}}
 
 /* ---------- REVEAL ---------- */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
@@ -213,7 +225,7 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
   .why-inner{padding:44px 0 56px}
   .promise{margin-top:40px}
   .hero{display:block;min-height:0}
-  .hero-img{position:relative;inset:auto;height:clamp(240px,46vw,420px);background-position:60% center}
+  .hero-img{position:relative;inset:auto;display:block;width:100%;height:clamp(240px,46vw,420px);object-position:60% center}
   .hero::after{display:none}
   .hero-content{max-width:640px;padding:44px 0 56px}
   .burger{display:block;justify-self:end}
@@ -285,8 +297,8 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
       <a href="#szolgaltatasok">Szolgáltatások</a>
       <a href="#referenciak">Referenciák</a>
     </nav>
-    <a href="#top" class="lockup" aria-label="Clear Wolf Production Kft. – főoldal">
-      <span class="lk-row"><span class="lk-word">CLEAR</span><img src="logo-header.png" width="583" height="700" alt="Clear Wolf logó"><span class="lk-word">WOLF</span></span>
+    <a href="#top" class="lockup" title="Főoldal">
+      <span class="lk-row"><span class="lk-word">CLEAR</span><img src="logo-header.webp" width="167" height="200" alt="Clear Wolf logó"><span class="lk-word">WOLF</span></span>
       <span class="lk-sub">PRODUCTION KFT.</span>
     </a>
     <nav class="menu dnav nav-r" aria-label="Kapcsolat">
@@ -306,7 +318,7 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
 
 <main>
 <section class="hero">
-  <div class="hero-img" role="img" aria-label="Ragyogóan tiszta, elegáns szállodai előcsarnok"></div>
+  <img class="hero-img" src="hero.webp" srcset="hero-800.webp 800w, hero.webp 1236w" sizes="100vw" width="1236" height="593" alt="Ragyogóan tiszta, elegáns szállodai előcsarnok" fetchpriority="high">
   <div class="wrap">
     <div class="hero-content">
       <span class="kicker">Professzionális takarítócég</span>
@@ -325,19 +337,19 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
     <div class="reveal">
       <h2 class="eyebrow">Referenciáink közül</h2>
       <div class="logo-row">
-        <div class="ref-logo ref-vision"><img src="ref-vision.png" width="113" height="136" alt="Hotel Vision Budapest"></div>
-        <div class="ref-logo ref-oktogon"><img src="ref-oktogon.png" width="130" height="97" alt="Hotel Oktogon"></div>
-        <div class="ref-logo ref-moments"><img src="ref-moments.png" width="378" height="408" alt="Hotel Moments"></div>
-        <div class="ref-logo ref-emerald"><img src="ref-emerald.png" width="252" height="347" alt="Emerald Hotel & Suites"></div>
-        <div class="ref-logo ref-continental"><img src="ref-continental.png" width="139" height="108" alt="Continental Citygolf Club"></div>
+        <div class="ref-logo ref-vision"><img src="ref-vision.webp" width="113" height="136" alt="Hotel Vision Budapest"></div>
+        <div class="ref-logo ref-oktogon"><img src="ref-oktogon.webp" width="130" height="97" alt="Hotel Oktogon"></div>
+        <div class="ref-logo ref-moments"><img src="ref-moments.webp" width="185" height="200" alt="Hotel Moments"></div>
+        <div class="ref-logo ref-emerald"><img src="ref-emerald.webp" width="145" height="200" alt="Emerald Hotel & Suites"></div>
+        <div class="ref-logo ref-continental"><img src="ref-continental.webp" width="139" height="108" alt="Continental Citygolf Club"></div>
       </div>
     </div>
     <div class="ref-earlier reveal">
       <h3 class="eyebrow sm">Korábbi referenciáink</h3>
       <div class="logo-row">
-        <div class="ref-logo ref-kiosk"><img src="ref-kiosk.png" width="236" height="379" alt="Kiosk Budapest"></div>
-        <div class="ref-logo ref-babel"><img src="ref-babel.png" width="500" height="224" alt="Bábel étterem"></div>
-        <div class="ref-logo ref-costes"><img src="ref-costes.png" width="140" height="144" alt="Costes Restaurant"></div>
+        <div class="ref-logo ref-kiosk"><img src="ref-kiosk.webp" width="125" height="200" alt="Kiosk Budapest"></div>
+        <div class="ref-logo ref-babel"><img src="ref-babel.webp" width="446" height="200" alt="Bábel étterem"></div>
+        <div class="ref-logo ref-costes"><img src="ref-costes.webp" width="140" height="144" alt="Costes Restaurant"></div>
       </div>
     </div>
   </div>
@@ -349,61 +361,61 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
     <div class="svc-grid">
 
       <article class="svc reveal">
-        <div class="svc-img"><img src="svc-szalloda.jpg" width="552" height="285" alt="Szállodai szoba" loading="lazy"></div>
+        <div class="svc-img"><img src="svc-szalloda.webp" width="552" height="285" alt="Szállodai szoba" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 32 32"><path d="M4 24V9M4 18h24v6M28 24v-4M4 15h7a3 3 0 013 3M14 18v-4a2 2 0 012-2h9a3 3 0 013 3v3"/><circle cx="8.5" cy="13" r="2"/></svg></div>
         <div class="svc-body"><h3>Szállodák takarítása</h3><p>Hotelek, szálláshelyek szobáinak és közös tereinek professzionális tisztítása</p></div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-img"><img src="svc-etterem.jpg" width="546" height="285" alt="Étterem terített asztalokkal" loading="lazy"></div>
+        <div class="svc-img"><img src="svc-etterem.webp" width="546" height="285" alt="Étterem terített asztalokkal" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 32 32"><path d="M10 4v8a3 3 0 01-6 0V4M7 4v24M22 28V4c-3 2-4 6-4 10v4h4"/></svg></div>
         <div class="svc-body"><h3>Étterem- és konyhatakarítás</h3><p>Éttermek és ipari konyhák napi és nagytakarítása</p></div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-img"><img src="svc-elszivo.jpg" width="549" height="285" alt="Konyhai elszívó" loading="lazy"></div>
+        <div class="svc-img"><img src="svc-elszivo.webp" width="549" height="285" alt="Konyhai elszívó" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 32 32"><path d="M13 4h6v8M13 4v8M7 21l6-9h6l6 9zM5 21h22v3H5zM11 27v-1M16 28v-2M21 27v-1"/></svg></div>
         <div class="svc-body"><h3>Elszívótakarítás</h3><p>Konyhai elszívók szakszerű tisztítása</p></div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-img"><img src="svc-padlo.jpg" width="549" height="285" alt="Gépi padlósúrolás" loading="lazy"></div>
+        <div class="svc-img"><img src="svc-padlo.webp" width="549" height="285" alt="Gépi padlósúrolás" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 32 32"><path d="M11 4v12M21 4v12M8 16h16l-1 6H9zM6 26h20M10 22v4M22 22v4"/></svg></div>
         <div class="svc-body"><h3>Padlózat gépi súrolása</h3><p>Ragyogó, higiénikus padlók gépi súrolással</p></div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-img"><img src="svc-ablak.jpg" width="552" height="285" alt="Ablaktisztítás" loading="lazy"></div>
+        <div class="svc-img"><img src="svc-ablak.webp" width="552" height="285" alt="Ablaktisztítás" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 32 32"><rect x="6" y="4" width="20" height="24" rx="1"/><path d="M16 4v24M6 16h20M19 9l3-3M19 13l5-5"/></svg></div>
         <div class="svc-body"><h3>Ablaktisztítás</h3><p>Kirakatok, üvegfelületek csíkmentes tisztítása</p></div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-img"><img src="svc-szonyeg.jpg" width="552" height="285" alt="Szőnyegtisztítás" loading="lazy"></div>
+        <div class="svc-img"><img src="svc-szonyeg.webp" width="552" height="285" alt="Szőnyegtisztítás" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22"/><rect x="9" y="9" width="14" height="14"/><path d="M16 11l5 5-5 5-5-5z"/></svg></div>
         <div class="svc-body"><h3>Szőnyeg- és kárpittisztítás</h3><p>Mélytisztítás a friss, tiszta környezetért</p></div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-img"><img src="svc-iroda.jpg" width="546" height="285" alt="Iroda" loading="lazy"></div>
+        <div class="svc-img"><img src="svc-iroda.webp" width="546" height="285" alt="Iroda" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="16" rx="2"/><path d="M12 10V7a1 1 0 011-1h6a1 1 0 011 1v3M4 17h24M14 17v3h4v-3"/></svg></div>
         <div class="svc-body"><h3>Irodatakarítás</h3><p>Rendszeres takarítás a tiszta munkakörnyezetért</p></div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-img"><img src="svc-epitkezes.jpg" width="549" height="285" alt="Felújítás utáni helyiség" loading="lazy"></div>
+        <div class="svc-img"><img src="svc-epitkezes.webp" width="549" height="285" alt="Felújítás utáni helyiség" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 32 32"><path d="M5 22a11 11 0 0122 0M3 22h26v3H3zM13 11.5V8h6v3.5M16 8v14"/></svg></div>
         <div class="svc-body"><h3>Építkezés, felújítás utáni takarítás</h3><p>Por és törmelék eltávolítása a munkálatok után</p></div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-img"><img src="svc-garazs.jpg" width="549" height="285" alt="Mélygarázs" loading="lazy"></div>
+        <div class="svc-img"><img src="svc-garazs.webp" width="549" height="285" alt="Mélygarázs" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 32 32"><path d="M6 20l2.5-7a2 2 0 012-1.4h11a2 2 0 012 1.4L26 20M5 20h22v5H5zM7 25v2M25 25v2"/><circle cx="10" cy="22.5" r="1"/><circle cx="22" cy="22.5" r="1"/></svg></div>
         <div class="svc-body"><h3>Garázs padlótisztítás</h3><p>Mélygarázsok tiszta, biztonságos padlófelülete</p></div>
       </article>
 
       <article class="svc reveal">
-        <div class="svc-img"><img src="svc-konyha.jpg" width="552" height="285" alt="Ipari konyha" loading="lazy"></div>
+        <div class="svc-img"><img src="svc-konyha.webp" width="552" height="285" alt="Ipari konyha" loading="lazy"></div>
         <div class="svc-icon"><svg viewBox="0 0 32 32"><path d="M10 18a5 5 0 01-1-9.9A6 6 0 0121 7a5 5 0 012 9.6V18M10 18h13v8H10zM10 22h13"/></svg></div>
         <div class="svc-body"><h3>Konyhai kisegítő tevékenységek</h3><p>Fekete- és fehér mosogatás, „konyhalány” feladatok</p></div>
       </article>
@@ -424,7 +436,7 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
 <section class="why" id="rolunk">
   <div class="why-img" role="img" aria-label="Precíz felülettisztítás"></div>
   <div class="why-line"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="100" y1="0" x2="72" y2="100" stroke="#c9a96a" stroke-width=".5" vector-effect="non-scaling-stroke" style="stroke-width:2px"/></svg></div>
-  <img class="why-wolf" src="logo-light.png" alt="" aria-hidden="true">
+  <img class="why-wolf" src="logo-light.webp" alt="" aria-hidden="true">
   <div class="wrap why-inner">
     <div class="spacer"></div>
     <div class="reveal">
@@ -434,6 +446,7 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
         <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Megbízható, minőségi szolgáltatás</li>
         <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Rugalmas, gyors kiszolgálás</li>
         <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Tapasztalt, professzionális csapat</li>
+        <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg>Minden munkavállalónk egészségügyi kiskönyvvel és munkaalkalmassági igazolással rendelkezik</li>
       </ul>
     </div>
     <div class="why-side reveal">
@@ -457,13 +470,31 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
       <p class="tagline">Professzionális takarítás &nbsp;•&nbsp; Tiszta környezet &nbsp;•&nbsp; Értékteremtő minőség</p>
     </div>
     <div class="foot-brand">
-      <span class="lockup dark"><span class="lk-row"><span class="lk-word">CLEAR</span><img src="logo-light.png" width="583" height="700" alt="Clear Wolf logó"><span class="lk-word">WOLF</span></span><span class="lk-sub">PRODUCTION KFT.</span></span>
+      <span class="lockup dark"><span class="lk-row"><span class="lk-word">CLEAR</span><img src="logo-light.webp" width="500" height="600" alt="Clear Wolf logó"><span class="lk-word">WOLF</span></span><span class="lk-sub">PRODUCTION KFT.</span></span>
     </div>
   </div>
-  <div class="wrap copy">© <span id="year">2026</span> Clear Wolf Production Kft. Minden jog fenntartva.</div>
+  <div class="wrap copy">
+    <span>© <span id="year">2026</span> Clear Wolf Production Kft. Minden jog fenntartva.</span>
+    <nav class="legal" aria-label="Jogi információk">
+      <a href="impresszum.html">Impresszum</a>
+      <a href="adatkezelesi-tajekoztato.html">Adatkezelési tájékoztató</a>
+      <a href="suti-tajekoztato.html">Süti tájékoztató</a>
+    </nav>
+  </div>
 </footer>
 
+<div class="cookie" id="cookie" role="region" aria-label="Süti tájékoztatás">
+  <p>Weboldalunk nem használ nyomkövető vagy marketing célú sütiket, csak a működéshez szükséges technikai megoldásokat. Részletek: <a href="suti-tajekoztato.html">Süti tájékoztató</a> és <a href="adatkezelesi-tajekoztato.html">Adatkezelési tájékoztató</a>.</p>
+  <button type="button" id="cookieOk">Rendben</button>
+</div>
+
 <script>
+(function(){
+  var ck=document.getElementById('cookie'),seen=false;
+  try{seen=localStorage.getItem('cw_cookie_ok')==='1';}catch(e){}
+  if(!seen){setTimeout(function(){ck.classList.add('show');},900);}
+  document.getElementById('cookieOk').addEventListener('click',function(){ck.classList.remove('show');try{localStorage.setItem('cw_cookie_ok','1');}catch(e){}});
+})();
 (function(){
   var burger=document.getElementById('burger'),menu=document.getElementById('menu'),header=document.querySelector('header');
   burger.addEventListener('click',function(){
