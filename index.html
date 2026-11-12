@@ -23,7 +23,12 @@
   "logo":"logo.png",
   "telephone":"+36205908760",
   "email":"cwpkft@gmail.com",
-  "founder":{"@type":"Person","name":"Farkas-Tóth Erik"},
+  "legalName":"Clear Wolf Production Kft.",
+  "address":{"@type":"PostalAddress","streetAddress":"Aggteleki utca 9.","postalCode":"2030","addressLocality":"Érd","addressCountry":"HU"},
+  "foundingDate":"2021-10-21",
+  "taxID":"27485053-2-13",
+  "numberOfEmployees":{"@type":"QuantitativeValue","minValue":10,"maxValue":19},
+  "employee":{"@type":"Person","name":"Farkas-Tóth Erik","jobTitle":"Ügyvezető"},
   "areaServed":"HU",
   "knowsAbout":["Szállodatakarítás","Étteremtakarítás","Konyhatakarítás","Elszívótisztítás","Gépi padlósúrolás","Ablaktisztítás","Szőnyegtisztítás","Kárpittisztítás","Irodatakarítás","Építkezés utáni takarítás","Garázstakarítás"]
 }
@@ -112,12 +117,13 @@ header .brand-text small{color:#d8d3c8}
 
 /* ---------- REFERENCES ---------- */
 .refs{background:#fff;border-top:1px solid #ece4d6;padding:46px 0 50px;border-bottom:1px solid var(--cream-2)}
-.refs-grid{display:grid;grid-template-columns:2.7fr 1.35fr;gap:40px;align-items:start}
+.refs-grid{display:grid;grid-template-columns:1fr;gap:30px}
 .eyebrow{text-align:center;font-size:14px;letter-spacing:.42em;text-transform:uppercase;color:var(--navy);margin-bottom:26px}
 .eyebrow.sm{font-size:11px;letter-spacing:.32em;margin-top:6px}
 .logo-row{display:flex;align-items:stretch;justify-content:space-between}
 .logo-row+.logo-row{margin-top:0}
-.ref-earlier{border-left:1px solid #cbbfa9;padding-left:34px}
+.ref-earlier{border-top:1px solid #e3d8c4;padding-top:26px}
+.ref-earlier .logo-row{max-width:1040px;margin:0 auto}
 /* Referencia logók */
 .ref-logo{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:78px;padding:4px 14px;text-align:center;color:var(--navy);position:relative}
 .ref-logo+.ref-logo::before{content:"";position:absolute;left:0;top:8%;bottom:8%;width:1px;background:#cbbfa9}
@@ -128,6 +134,7 @@ header .brand-text small{color:#d8d3c8}
 .ref-logo.ref-oktogon img,.ref-logo.ref-continental img{height:70px}
 .ref-logo.ref-costes img{height:80px}
 .ref-logo.ref-kiosk img{height:80px}
+.ref-logo.ref-leo img{height:72px}
 .ref-logo .ph-name{font-family:var(--serif);font-weight:500;font-size:21px;letter-spacing:.06em;line-height:1.1;text-transform:uppercase}
 .ref-logo .ph-sub{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:5px}
 
@@ -266,7 +273,9 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
   .ref-logo{flex:0 0 50%;min-height:96px;margin-bottom:14px}
   .ref-logo img{height:74px}
   .ref-logo+.ref-logo::before{display:none}
-  .ref-earlier .ref-logo{flex:0 0 33.33%}
+  .ref-earlier .ref-logo{flex:0 0 33.33%;min-width:0;padding:4px 6px}
+  .ref-logo .ph-name{font-size:16px}
+  .ref-logo .ph-sub{font-size:9px;letter-spacing:.2em}
   .logo-row{justify-content:center}
   .ref-logo.ref-babel img{max-width:100%}
   .ref-earlier .ref-logo img{height:64px}
@@ -350,6 +359,9 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
         <div class="ref-logo ref-kiosk"><img src="ref-kiosk.webp" width="125" height="200" alt="Kiosk Budapest"></div>
         <div class="ref-logo ref-babel"><img src="ref-babel.webp" width="446" height="200" alt="Bábel étterem"></div>
         <div class="ref-logo ref-costes"><img src="ref-costes.webp" width="140" height="144" alt="Costes Restaurant"></div>
+        <div class="ref-logo"><span class="ph-name">Scruton</span><span class="ph-sub">Éttermek</span></div>
+        <div class="ref-logo ref-clark"><img src="ref-clark.webp" width="162" height="200" alt="Clark Hotel – The Urban Legend"></div>
+        <div class="ref-logo ref-leo"><img src="ref-leo.webp" width="315" height="200" alt="Leo Rooftop"></div>
       </div>
     </div>
   </div>
@@ -474,7 +486,7 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
     </div>
   </div>
   <div class="wrap copy">
-    <span>© <span id="year">2026</span> Clear Wolf Production Kft. Minden jog fenntartva.</span>
+    <span>© <span id="year">2026</span> Clear Wolf Production Kft. · 2030 Érd, Aggteleki utca 9. · Minden jog fenntartva.</span>
     <nav class="legal" aria-label="Jogi információk">
       <a href="impresszum.html">Impresszum</a>
       <a href="adatkezelesi-tajekoztato.html">Adatkezelési tájékoztató</a>
