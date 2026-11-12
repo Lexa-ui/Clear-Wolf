@@ -177,20 +177,20 @@ header .brand-text small{color:#d8d3c8}
 
 /* ---------- WHY ---------- */
 .why{position:relative;background:var(--cream);border-top:1px solid #ece4d6;overflow:hidden;min-height:300px}
-.why-img{position:absolute;left:0;top:0;bottom:0;width:44%;background:url(cta.webp) 0% 50%/cover no-repeat;clip-path:polygon(0 0,100% 0,72% 100%,0 100%)}
-.why-line{position:absolute;left:0;top:0;bottom:0;width:44%;pointer-events:none}
+.why-img{position:absolute;left:0;top:0;bottom:0;width:56%;background:url(cta.webp) 12% 55%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 74%,rgba(0,0,0,.5) 88%,transparent 100%);mask-image:linear-gradient(90deg,#000 0%,#000 74%,rgba(0,0,0,.5) 88%,transparent 100%)}
+.why-line{display:none}
 .why-line svg{width:100%;height:100%}
 .why-wolf{width:auto;max-width:none;object-fit:contain;position:absolute;right:3%;top:50%;transform:translateY(-50%);height:88%;opacity:.06;pointer-events:none}
-.why-inner{position:relative;z-index:2;display:grid;grid-template-columns:44% 1fr auto;align-items:center;gap:40px;padding:62px 0}
+.why-inner{position:relative;z-index:2;display:grid;grid-template-columns:50% 1fr;align-items:center;gap:0 44px;padding:60px 0}
 .why h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,3vw,40px);color:var(--navy);line-height:1.15;margin-bottom:22px}
 .why h2 span{color:var(--gold-text)}
-.why-lead{color:#3f4553;font-size:16.5px;line-height:1.65;max-width:520px;margin:-6px 0 18px}
-.why ul{list-style:none;max-width:540px}
-.why li{display:flex;align-items:flex-start;gap:18px;color:#3f4553;font-size:18px;font-weight:300;padding:6px 0}
+.why-lead{color:#3f4553;font-size:16.5px;line-height:1.65;max-width:640px;margin:-6px 0 18px}
+.why ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 30px}
+.why li{display:flex;align-items:flex-start;gap:14px;color:#3f4553;font-size:17px;font-weight:300;padding:6px 0}
 .why li:nth-child(2){color:var(--gold-text)}
 .why li svg{width:20px;height:20px;flex:none;margin-top:5px;stroke:var(--gold-text);fill:none;stroke-width:2.2}
 .why .btn{margin-top:0;white-space:nowrap}
-.why-side{display:flex;flex-direction:column;align-items:center;gap:26px}
+.why-side{grid-column:2;display:flex;flex-direction:row;align-items:center;gap:36px;margin-top:26px}
 .years{display:flex;align-items:center;gap:14px}
 .years b{font-family:var(--serif);font-weight:500;font-size:84px;line-height:.8;background:linear-gradient(135deg,#c9a463,#a8833f 60%,#8f6c30);-webkit-background-clip:text;background-clip:text;color:transparent}
 .years span{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--navy);line-height:1.5;border-left:1px solid var(--gold);padding-left:14px}
@@ -211,7 +211,8 @@ section[id],footer[id]{scroll-margin-top:100px}
 .q-direct{border-top:1px solid rgba(201,169,106,.3);padding-top:22px;display:flex;flex-direction:column;gap:6px}
 .q-direct span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#a9abb3}
 .q-direct a{color:#fff;font-size:18px;text-decoration:none;width:max-content}
-.q-direct a:hover{color:var(--gold-light)}
+.q-direct a{border-bottom:1px dashed rgba(230,204,151,.4);padding-bottom:1px}
+.q-direct a:hover{color:var(--gold-light);border-bottom-style:solid}
 .q-form{background:#fff;border:1px solid #ece4d6;border-radius:12px;padding:38px 38px 32px;box-shadow:0 14px 40px rgba(31,41,64,.07);display:flex;flex-direction:column;gap:16px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .fld{display:flex;flex-direction:column;gap:7px;border:0;min-width:0}
@@ -252,7 +253,8 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
 .foot{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding:52px 0 40px;position:relative;z-index:2}
 .contacts{display:flex;flex-wrap:wrap;gap:22px 64px;padding-bottom:30px;border-bottom:1px solid #e9e1d2}
 .contacts a,.contacts div{display:flex;align-items:center;gap:16px;font-size:18px;transition:color .25s}
-.contacts a:hover{color:var(--gold-text)}
+.contacts a{border-bottom:1px dashed rgba(168,131,63,.45);padding-bottom:2px}
+.contacts a:hover{color:var(--gold-text);border-bottom-style:solid}
 .contacts svg{width:26px;height:26px;fill:var(--gold-text);flex:none}
 .tagline{margin-top:24px;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
 .foot-brand{display:flex;align-items:center;gap:26px;padding-left:44px;border-left:1px solid #e3d8c4}
@@ -276,9 +278,11 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:1180px){
-  .why-img,.why-line{width:40%}
-  .why-inner{grid-template-columns:40% 1fr}
-  .why-side{grid-column:2;flex-direction:row;justify-content:flex-start;gap:34px;margin-top:-10px}
+  .why-img{width:46%}
+  .why-inner{grid-template-columns:44% 1fr;gap:0 32px}
+  .why-side{gap:24px;flex-wrap:wrap}
+  .why h2{font-size:30px}
+  .why ul{grid-template-columns:1fr}
   .menu{gap:22px}
   .menu a{font-size:14px}
   .btn-outline{padding:10px 18px}
@@ -288,6 +292,9 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
   .ref-earlier{border-left:0;padding-left:0;border-top:1px solid #cbbfa9;padding-top:26px}
 }
 @media (max-width:960px){
+  .logo-row{flex-wrap:wrap;justify-content:center;row-gap:18px}
+  .ref-logo{flex:0 0 33.33%;min-width:0}
+  .ref-logo+.ref-logo::before{display:none}
   .why-inner{padding:44px 0 56px}
   .promise{margin-top:40px}
   .hero{display:block;min-height:0}
@@ -306,7 +313,7 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
   .svc-grid{grid-template-columns:repeat(2,1fr);gap:18px}
   .promise-grid{grid-template-columns:repeat(2,1fr);row-gap:26px}
   .pr:nth-child(3)::before{display:none}
-  .why-img{position:relative;width:100%;height:clamp(220px,40vw,340px);clip-path:none;background-position:20% center}.why-line{display:none}.why-inner{padding-top:34px}
+  .why-img{position:relative;width:100%;height:clamp(240px,46vw,380px);background-position:15% center;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%)}.why-line{display:none}.why-inner{padding-top:34px}
   .why-inner{grid-template-columns:1fr;gap:28px}
   .why-side{grid-column:auto;flex-direction:column;align-items:flex-start;gap:24px;margin-top:0}
   .why-inner{grid-template-columns:1fr}
@@ -602,8 +609,8 @@ footer::after{content:"";position:absolute;right:-40px;bottom:-40px;width:340px;
     <div>
       <div class="contacts">
         <div><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-5 0-9 2.5-9 6v2h18v-2c0-3.5-4-6-9-6z"/></svg>Farkas-Tóth Erik</div>
-        <a href="tel:+36205908760"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>+36 (20) 590 8760</a>
-        <a href="mailto:cwpkft@gmail.com"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1.4 2L12 12.6 19.6 7H4.4zM20 8.4l-8 5.9-8-5.9V17h16z"/></svg>cwpkft@gmail.com</a>
+        <a href="tel:+36205908760" title="Hívás: +36 (20) 590 8760"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>+36 (20) 590 8760</a>
+        <a href="mailto:cwpkft@gmail.com" title="E-mail küldése"><svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1.4 2L12 12.6 19.6 7H4.4zM20 8.4l-8 5.9-8-5.9V17h16z"/></svg>cwpkft@gmail.com</a>
       </div>
       <p class="tagline">Professzionális takarítás &nbsp;•&nbsp; Tiszta környezet &nbsp;•&nbsp; Értékteremtő minőség</p>
     </div>
