@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lexa-ui.github.io/Clear-Wolf/sitemap.xml
